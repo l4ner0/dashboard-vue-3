@@ -101,11 +101,178 @@
                 <q-icon name="live_tv" size="36px" />
                 <div class="q-mt-md text-center">{{ lorem }}</div>
               </q-carousel-slide>
-              <q-carousel-slide name="layers" class="column no-wrap flex-center">
+              <q-carousel-slide
+                name="layers"
+                class="column no-wrap flex-center"
+              >
                 <q-icon name="layers" size="36px" />
                 <div class="q-mt-md text-center">{{ lorem }}</div>
               </q-carousel-slide>
             </q-carousel>
+          </div>
+        </q-card>
+      </div>
+    </div>
+    <q-toolbar>
+      <div class="text-overline">Events</div>
+      <q-space></q-space>
+      <div class="text-overline">Your patients today</div>
+      <div class="text-caption text-green q-ml-md">All patients</div>
+      <q-icon name="fas fa-chevron-right" size="10px" color="green-7" />
+    </q-toolbar>
+    <div class="row q-col-gutter-md">
+      <div class="col-6">
+        <q-card class="card1 q-mx-md q-pa-sm" bordered>
+          <div class="row q-col-gutter-md">
+            <div class="col-6">
+              <div class="text-caption">Team meeting</div>
+              <div class="text-caption text-grey-5">13:30 - 14:30</div>
+              <div>
+                <q-avatar
+                  v-for="n in 5"
+                  :key="n"
+                  size="40px"
+                  class="overlapping"
+                  :style="`left: ${n * 25}px`"
+                >
+                  <img
+                    :src="`https://cdn.quasar.dev/img/avatar${n + 1}.jpg`"
+                    alt="avatar"
+                  />
+                </q-avatar>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="flex justify-end row">
+                <q-toggle color="green" v-model="selection" val="green" />
+              </div>
+              <div class="flex justify-end row">
+                <q-btn
+                  round
+                  icon="fas fa-pencil-alt"
+                  size="10px"
+                  color="black"
+                  class="q-mr-sm"
+                ></q-btn>
+                <q-btn
+                  round
+                  icon="fas fa-chevron-right"
+                  size="10px"
+                  color="green"
+                  class=""
+                ></q-btn>
+              </div>
+            </div>
+          </div>
+        </q-card>
+      </div>
+      <div class="col-6">
+        <q-card class="q-mx-md q-pa-sm" bordered>
+          <div class="row q-col-gutter-md">
+            <div class="col-3">
+              <div class="text-caption text-weight-bolder q-mt-lg">
+                10:00 am
+              </div>
+            </div>
+            <div class="col-9">
+              <q-card class="q-px-sm colorCard" bordered flat>
+                <q-item>
+                  <q-item-section avatar>
+                    <q-avatar>
+                      <img
+                        src="https://cdn.quasar.dev/img/avatar2.jpg"
+                        alt="avatar2"
+                      />
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>Sarah Hosten</q-item-label>
+                    <q-item-label caption>Diagnosis: Stroker</q-item-label>
+                  </q-item-section>
+                  <q-item-section side>
+                    <q-icon name="fas fa-ellipsis-v"></q-icon>
+                  </q-item-section>
+                </q-item>
+              </q-card>
+            </div>
+          </div>
+        </q-card>
+      </div>
+    </div>
+    <div class="row q-col-gutter-md" style="margin-top: 1px">
+      <div class="col-6">
+        <q-card class="card1 q-mx-md q-pa-sm" bordered>
+          <div class="row q-col-gutter-md">
+            <div class="col-6">
+              <div class="text-caption">Team meeting</div>
+              <div class="text-caption text-grey-5">13:30 - 14:30</div>
+              <div>
+                <q-avatar
+                  v-for="n in 5"
+                  :key="n"
+                  size="40px"
+                  class="overlapping"
+                  :style="`left: ${n * 25}px`"
+                >
+                  <img
+                    :src="`https://cdn.quasar.dev/img/avatar${n + 1}.jpg`"
+                    alt="avatar"
+                  />
+                </q-avatar>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="flex justify-end row">
+                <q-toggle color="green" v-model="selection" val="green" />
+              </div>
+              <div class="flex justify-end row">
+                <q-btn
+                  round
+                  icon="fas fa-pencil-alt"
+                  size="10px"
+                  color="black"
+                  class="q-mr-sm"
+                ></q-btn>
+                <q-btn
+                  round
+                  icon="fas fa-chevron-right"
+                  size="10px"
+                  color="green"
+                ></q-btn>
+              </div>
+            </div>
+          </div>
+        </q-card>
+      </div>
+      <div class="col-6">
+        <q-card class="q-mx-md q-pa-sm" bordered>
+          <div class="row q-col-gutter-md">
+            <div class="col-3">
+              <div class="text-caption text-weight-bolder q-mt-lg">
+                10:00 am
+              </div>
+            </div>
+            <div class="col-9">
+              <q-card class="q-px-sm colorCard" bordered flat>
+                <q-item>
+                  <q-item-section avatar>
+                    <q-avatar>
+                      <img
+                        src="https://cdn.quasar.dev/img/avatar2.jpg"
+                        alt="avatar2"
+                      />
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>Sarah Hosten</q-item-label>
+                    <q-item-label caption>Diagnosis: Stroker</q-item-label>
+                  </q-item-section>
+                  <q-item-section side>
+                    <q-icon name="fas fa-ellipsis-v"></q-icon>
+                  </q-item-section>
+                </q-item>
+              </q-card>
+            </div>
           </div>
         </q-card>
       </div>
